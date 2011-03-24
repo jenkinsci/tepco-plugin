@@ -2,8 +2,6 @@ package org.jenkinsci.plugins.tepco;
 
 import static java.util.regex.Pattern.compile;
 import hudson.Extension;
-import hudson.Plugin;
-import hudson.PluginWrapper;
 import hudson.model.PeriodicWork;
 import hudson.model.Hudson;
 import hudson.widgets.Widget;
@@ -13,6 +11,7 @@ import java.io.InputStream;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.text.DateFormat;
+import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -43,6 +42,10 @@ public class TepcoWidget extends Widget {
 
     public void setUsages(List<UsageCondition> usages) {
         this.usages = usages;
+    }
+
+    public String formatNumber(int value) {
+        return DecimalFormat.getNumberInstance().format(value);
     }
 
     public static class UsageCondition {
