@@ -7,7 +7,7 @@
   </parent>
 
   <artifactId>tepco</artifactId>
-  <version>1.0-SNAPSHOT</version>
+  <version>0.1</version>
   <packaging>hpi</packaging>
   <name>Jenkins TEPCO plugin</name>
   <url>http://wiki.jenkins-ci.org/display/JENKINS/TEPCO+Plugin</url>
